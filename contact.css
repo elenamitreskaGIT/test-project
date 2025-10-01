@@ -1,0 +1,97 @@
+  /* -------- Base & Typography -------- */
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2rem; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif; color: #1a1a1a; background: #fafafa; }
+  h1 { margin-top: 0; line-height: 1.2; }
+
+  /* -------- Form Layout -------- */
+  form {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
+  fieldset {
+    margin: 0 0 1rem;
+    padding: 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+  }
+  legend {
+    font-weight: 700;
+    padding: 0 .25rem;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .9rem;
+  }
+  @media (max-width: 720px) {
+    .row { grid-template-columns: 1fr; }
+  }
+
+  /* -------- Labels & Controls -------- */
+  label { display: block; font-weight: 600; margin: .5rem 0 .25rem; }
+  input, select, textarea, button {
+    font: inherit;
+  }
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: .6rem .7rem;
+    border: 1px solid #d2d2d2;
+    border-radius: 8px;
+    background: #fff;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  textarea { min-height: 140px; resize: vertical; }
+
+  /* -------- Focus Visibility -------- */
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  button:focus-visible {
+    outline: 3px solid #cfe5ff; /* high-contrast ring */
+    outline-offset: 2px;
+  }
+
+  /* -------- Validation States (HTML5 built-in) -------- */
+  input:required:invalid,
+  select:required:invalid,
+  textarea:required:invalid {
+    border-color: #e57373; /* red hint when invalid */
+  }
+  input:valid,
+  select:valid,
+  textarea:valid {
+    border-color: #7dbb7d; /* green hint when valid */
+  }
+
+  /* -------- Help / Small text -------- */
+  small.help {
+    display: block;
+    color: #666;
+    margin-top: .25rem;
+  }
+
+  /* -------- Actions -------- */
+  .actions {
+    display: flex; gap: .75rem; align-items: center; margin-top: .75rem;
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: .65rem 1rem; border-radius: 8px; border: 1px solid #1e63ff;
+    background: #1e63ff; color: #fff; text-decoration: none; cursor: pointer;
+  }
+  .btn:hover { filter: brightness(1.05); }
+  .muted { color: #666; font-size: .95rem; }
+
+  /* -------- Visually Hidden utility -------- */
+  .visually-hidden {
+    position: absolute !important; width: 1px; height: 1px; margin: -1px;
+    border: 0; padding: 0; white-space: nowrap; clip-path: inset(50%);
+    clip: rect(0 0 0 0); overflow: hidden;
+  }

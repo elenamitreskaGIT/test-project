@@ -1,0 +1,70 @@
+    /* ---------- Base & Typography ---------- */
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; }
+    body {
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+    header, main { padding: 1rem; }
+    h1, h2 { line-height: 1.25; margin: 0 0 .75rem; }
+    p { margin: 0 0 1rem; }
+
+    /* ---------- Layout ---------- */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 .75rem 2rem;
+    }
+
+    /* ---------- Media blocks ---------- */
+    section.media {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 800px) {
+      section.media { grid-template-columns: 1fr; }
+    }
+
+    /* Figures & captions */
+    figure {
+      margin: 0; /* remove default margins for tighter layout */
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      padding: .75rem;
+    }
+    figure + figure { margin-top: 0; } /* grid handles spacing */
+    figcaption {
+      font-size: .95rem;
+      color: #555;
+      margin-top: .5rem;
+    }
+
+    /* Responsive images & video */
+    img, video {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Utility: focus visibility for keyboard users */
+    a:focus-visible, button:focus-visible, video:focus-visible {
+      outline: 3px solid #cfe5ff;
+      outline-offset: 2px;
+    }
+
+    /* Optional card-like block for the video area */
+    .videocard {
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      padding: .75rem;
+    }
+    .note {
+      font-size: .92rem;
+      color: #666;
+    }
